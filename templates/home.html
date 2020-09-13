@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div style="width: 500px" id="reader"></div>
+
+    <script src="{% static 'js/min/html5-qrcode.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/scan_and_stop_qrcode.js' %}" type="text/javascript"></script>
+{% endblock %}
