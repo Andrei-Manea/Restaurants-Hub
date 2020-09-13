@@ -1,4 +1,5 @@
 <!doctype html>
+{% load qr_code %}
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -12,7 +13,13 @@
     <title>Hello, world!</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1>{% qr_from_text "Hello World!" size="T" %}</h1>
+<h2>
+    <input type="file" name="image" accept="image/*" capture="environment">
+</h2>
+<h2>
+    <input type="file" name="image" accept="image/*" capture="user">
+</h2>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
